@@ -1,0 +1,220 @@
+.video-call-page {
+  display: flex;
+  height: 80vh;
+  background: #1a1a1a;
+  overflow: hidden;
+
+  // Video Area - 65%
+  .video-area {
+    flex: 0 0 65%;
+    display: flex;
+    flex-direction: column;
+    background: #0a0a0a;
+    position: relative;
+
+    // Screen Share Overlay
+    .screen-share {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 80px;
+      background: #000;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.screen-hidden {
+        display: none;
+      }
+
+      .screen-video {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      .screen-badge {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: #34c759;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+
+    // Video Grid
+    .video-grid {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 10px;
+      padding: 15px;
+      overflow-y: auto;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      .video-box {
+        position: relative;
+        background: #000;
+        border-radius: 5px;
+        overflow: hidden;
+        aspect-ratio: 16 / 7.5;
+
+        &.my-video {
+          border: 3px solid #007aff;
+        }
+
+        .mute-icon {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 30px;
+          height: 30px;
+          background: #cd140a;
+          border-radius: 50%;
+          padding: 6px;
+          z-index: 10;
+          display: none;
+        }
+
+        .video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .name-tag {
+          position: absolute;
+          bottom: 10px;
+          left: 10px;
+          background: rgba(0, 0, 0, 0.8);
+          color: white;
+          padding: 5px 12px;
+          border-radius: 15px;
+          font-size: 13px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    // Controls
+    .controls {
+      height: 80px;
+      background: rgba(0, 0, 0, 0.95);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      padding: 0 20px;
+      border-top: 1px solid #333;
+
+      .btn-control {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border: none;
+        background: #3a3a3c;
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        &.on {
+          background: #34c759;
+        }
+
+        &.off {
+          background: #3a30ff;
+        }
+
+        &.share {
+          background: #007aff;
+
+          &.active {
+            background: #ff9500;
+          }
+        }
+
+        &.end {
+          background: #ff3b30;
+          width: 65px;
+          height: 65px;
+
+          &:hover {
+            background: #d62828;
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  // Chat Area - 35%
+  .chat-area {
+    flex: 0 0 37%;
+    background: #f5f5f5;
+    border-left: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  // Responsive
+  @media (max-width: 1024px) {
+    flex-direction: column;
+
+    .video-area {
+      flex: 1;
+      height: 55%;
+    }
+
+    .chat-area {
+      flex: 1;
+      height: 45%;
+      border-left: none;
+      border-top: 1px solid #ddd;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .video-area {
+      .video-grid {
+        padding: 10px;
+        gap: 8px;
+      }
+
+      .controls {
+        height: 70px;
+        gap: 10px;
+
+        .btn-control {
+          width: 48px;
+          height: 48px;
+          font-size: 18px;
+
+          &.end {
+            width: 55px;
+            height: 55px;
+          }
+        }
+      }
+    }
+  }
+}

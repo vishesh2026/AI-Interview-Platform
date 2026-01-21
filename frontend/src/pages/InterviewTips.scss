@@ -1,0 +1,321 @@
+.interview-tips-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+
+  .tips-content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+    margin-left: 50px;
+
+    @media (max-width: 1024px) {
+      margin-left: 0;
+    }
+
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
+  }
+
+  .tips-header {
+    margin-bottom: 40px;
+
+    .back-button {
+      background: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 10px;
+      color: #22bdff;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        background: #22bdff;
+        color: white;
+      }
+
+      i {
+        font-size: 14px;
+      }
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #2c3e50;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #7f8c8d;
+    }
+  }
+
+  // Quick Tips Banner
+  .quick-tips-banner {
+    background: linear-gradient(135deg, #d622ff, #1a94cc);
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 24px rgba(34, 189, 255, 0.3);
+
+    h3 {
+      color: white;
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .quick-tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .quick-tip-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-3px);
+      }
+
+      .tip-number {
+        background: white;
+        color: #22bdff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 18px;
+        flex-shrink: 0;
+      }
+
+      p {
+        color: white;
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  // Main Tips Sections
+  .tips-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .tip-section {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+
+      .section-icon {
+        font-size: 40px;
+      }
+
+      h2 {
+        font-size: 26px;
+        color: #2c3e50;
+        margin: 0;
+        font-weight: 700;
+      }
+    }
+
+    .tips-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #5a6c7d;
+
+        .bullet {
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          font-weight: 700;
+          font-size: 14px;
+          flex-shrink: 0;
+          margin-top: 2px;
+        }
+
+        span:last-child {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  // Bottom CTA
+  .tips-cta {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    padding: 50px;
+    border-radius: 16px;
+    text-align: center;
+    margin-top: 50px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+
+    h3 {
+      color: white;
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      button {
+        padding: 16px 40px;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &.primary-cta {
+          background: linear-gradient(135deg, #22bdff, #1a94cc);
+          color: white;
+
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(34, 189, 255, 0.4);
+          }
+        }
+
+        &.secondary-cta {
+          background: white;
+          color: #2c3e50;
+
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive
+  @media (max-width: 768px) {
+    .tips-header {
+      h1 {
+        font-size: 28px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+    }
+
+    .quick-tips-banner {
+      padding: 20px;
+
+      h3 {
+        font-size: 20px;
+      }
+
+      .quick-tips-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .tip-section {
+      padding: 20px;
+
+      .section-header {
+        h2 {
+          font-size: 22px;
+        }
+
+        .section-icon {
+          font-size: 32px;
+        }
+      }
+
+      .tips-list li {
+        font-size: 15px;
+      }
+    }
+
+    .tips-cta {
+      padding: 30px 20px;
+
+      h3 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

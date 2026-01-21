@@ -1,0 +1,284 @@
+.room-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #471199 0%, #4aef38 100%);
+  padding: 40px;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding: 20px;
+    gap: 300px;
+  }
+
+  // Video Preview Section
+  .video-preview-section {
+    flex: 1;
+    max-width: 700px;
+
+    .video-wrapper {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      background: #000;
+
+      .preview-video {
+        width: 100%;
+        height: 550px;
+        object-fit: cover;
+        display: block;
+
+        @media (max-width: 768px) {
+          height: 400px;
+        }
+      }
+
+      .video-controls {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        padding: 15px 30px;
+        border-radius: 50px;
+
+        .control-btn {
+          background: white;
+          border: none;
+          width: 56px;
+          height: 56px;
+          border-radius: 50%;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+          &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+          }
+
+          &:active {
+            transform: scale(0.95);
+          }
+
+          .control-icon {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+    }
+  }
+
+  // Form Section
+  .room-form-section {
+    flex: 1;
+    max-width: 550px;
+
+    .form-container {
+      background: white;
+      border-radius: 24px;
+      position: relative;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+      @media (max-width: 768px) {
+        padding: 30px 20px;
+      }
+
+      .form-header {
+        text-align: center;
+        margin-bottom: 10px;
+
+        h1 {
+          font-size: 32px;
+          font-weight: 700;
+          background: linear-gradient(135deg, #11998e, #38ef7d);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          margin-bottom: 0px;
+        }
+
+        p {
+          font-size: 16px;
+          color: #7f8c8d;
+        }
+      }
+
+      .form-card {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 20px;
+        padding: 0px;
+        margin-bottom: 0px;
+
+        .section-header {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          text-align: left ;
+
+          .section-icon {
+            font-size: 28px;
+          }
+
+          h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+            
+
+          }
+        }
+
+        .room-input {
+          width: 100%;
+          padding: 16px 20px;
+          border: 2px solid #e0e0e0;
+          border-radius: 12px;
+          font-size: 15px;
+          transition: all 0.3s ease;
+          background: white;
+          margin-bottom: 15px;
+
+          &:focus {
+            outline: none;
+            border-color: #11998e;
+            box-shadow: 0 4px 12px rgba(17, 153, 142, 0.15);
+          }
+
+          &::placeholder {
+            color: #a0a0a0;
+          }
+        }
+
+        .action-btn {
+          width: 100%;
+          padding: 16px 24px;
+          border: none;
+          border-radius: 12px;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+
+          .btn-icon {
+            font-size: 20px;
+          }
+
+          &.create-btn {
+            background: linear-gradient(135deg, #0e20ec 0%, #032ff3 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(31, 63, 244, 0.905);
+
+            &:hover:not(:disabled) {
+              transform: translateY(-2px);
+              box-shadow: 0 6px 20px rgba(17, 153, 135, 0.5);
+            }
+
+            &:disabled {
+              opacity: 0.5;
+              cursor: not-allowed;
+            }
+          }
+
+          &.join-btn {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(44, 62, 80, 0.4);
+
+            &:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 6px 20px rgba(44, 62, 80, 0.5);
+            }
+          }
+
+          &:active {
+            transform: translateY(0);
+          }
+        }
+
+        .divider {
+          position: relative;
+          text-align: center;
+          margin: 30px 0;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #d0d0d0;
+          }
+
+          span {
+            position: relative;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 0 15px;
+            color: #7f8c8d;
+            font-weight: 600;
+            font-size: 14px;
+          }
+        }
+
+        .create-room-section,
+        .join-room-section {
+          margin-bottom: 0;
+        }
+      }
+
+      .back-link {
+        color: #00d5ff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        padding: 0px 16px;
+        border-radius: 10px;
+        width: auto;
+        justify-content: flex-start;
+        background: #f8f9fa;
+        position: absolute;
+        top: -0px;        // moves it above the
+        left: 0;
+
+        &:hover {
+          background: #e9ecef;
+          transform: translateX(-5px);
+        }
+
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .video-preview-section {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .room-form-section {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
