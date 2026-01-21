@@ -2,6 +2,8 @@
 
 A full-stack interview platform built using **React (Vite)** for the frontend and **Node.js + Express + MongoDB** for the backend.
 
+![Uploading Screenshot 2026-01-21 151118.png…]()
+
 ---
 
 ## 🚀 Features
@@ -32,18 +34,19 @@ Mock-Interview-website/
 └── README.md
 
 
-## 🧪 Features
-🔥 User Features
+✨ Highlights:
 
-    - **Candidate login & profile**
-    - **Take mock interviews**
-    - **Access interview tips**
-    - **Attempt quizzes**
-
-🧑‍💻 Interviewer Features
-
-    - **Host interview rooms**
-    - **Evaluate candidates**
+- 🧑‍💻 VSCode-Powered Code Editor
+- 🎥 1-on-1 Video Interview Rooms
+- 🧭 Dashboard with Live Stats
+- 🔊 Mic & Camera Toggle, Screen Sharing & Recording
+- 💬 Real-time Chat Messaging
+- ⚙️ Secure Code Execution in Isolated Environment
+- 🧩 Practice Problems Page
+- 🔒 Room Locking — allows only 2 participants
+- 🧰 REST API with Node.js & Express
+- 🧑‍💻 Git & GitHub Workflow (branches, PRs, merges)
+- 🚀 Deployment on Vercel and Render (free-tier friendly)
 
 ---
 
@@ -55,6 +58,7 @@ GitHub: @vishesh2026
 
 ## 📌 License
 This project is licensed under MIT License.
+
 
 
 
