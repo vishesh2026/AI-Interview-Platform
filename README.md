@@ -34,19 +34,24 @@ Mock-Interview-website/
 
 ## 🧪 Features
 🔥 User Features
-    1.Candidate login & profile
-    2.Take mock interviews
-    3.Access interview tips
-    4.Attempt quizzes
+    - **Candidate login & profile**
+    - **Take mock interviews**
+    - **Access interview tips**
+    - **Attempt quizzes**
 
 🧑‍💻 Interviewer Features
-    1.Host interview rooms
-    2.Evaluate candidates
+    - **Host interview rooms**
+    - **Evaluate candidates**
 
-##🧩 Contributors
+---
+
+## 🧩 Contributors
 👤 Vishesh Kumawat
 GitHub: @vishesh2026
 
-📌 License
+---
+
+## 📌 License
 This project is licensed under MIT License.
+
 
