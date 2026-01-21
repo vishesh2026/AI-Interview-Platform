@@ -2,7 +2,6 @@
 
 A full-stack interview platform built using **React (Vite)** for the frontend and **Node.js + Express + MongoDB** for the backend.
 
-![Uploading Screenshot 2026-01-21 151118.png…]()
 
 ---
 
@@ -58,6 +57,7 @@ GitHub: @vishesh2026
 
 ## 📌 License
 This project is licensed under MIT License.
+
 
 
 
