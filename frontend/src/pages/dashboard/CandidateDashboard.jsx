@@ -34,16 +34,7 @@ const Dashboard = () => {
               </div>
 
               {/* Quick Stats */}
-              <div className="quick-stats">
-                <div className="stat-badge">
-                  <span className="stat-number">{interviewsCount}</span>
-                  <span className="stat-label">Interviews</span>
-                </div>
-                <div className="stat-badge">
-                  <span className="stat-number">{quizzesCount}</span>
-                  <span className="stat-label">Quizzes</span>
-                </div>
-              </div>
+              
             </div>
           </header>
 

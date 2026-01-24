@@ -8,26 +8,6 @@ const AdminDashboard = () => {
   const { user } = useStore();
   const navigate = useNavigate();
 
-  // Mock data (replace with API later)
-  const stats = [
-    { 
-      id: 1, 
-      title: "Total Interviews", 
-      value: "24", 
-      icon: "🎯",
-      color: "#667eea",
-      trend: "+12% this month"
-    },
-    { 
-      id: 3, 
-      title: "Completed Today", 
-      value: "7", 
-      icon: "✅",
-      color: "#34c759",
-      trend: "3 pending"
-    },
-  ];
-
   const upcomingInterviews = [
     {
       id: 1,
@@ -63,9 +43,12 @@ const AdminDashboard = () => {
     },
   ];
 
-
   const handleCreateRoom = () => {
     navigate("/createroom");
+  };
+
+  const handleQuestionBank = () => {
+    navigate("/question-bank");
   };
 
   return (
@@ -84,22 +67,6 @@ const AdminDashboard = () => {
             Create Interview Room
           </button>
         </header>
-
-        {/* Stats Grid */}
-        <section className="stats-grid">
-          {stats.map((stat) => (
-            <div key={stat.id} className="stat-card" style={{ borderLeftColor: stat.color }}>
-              <div className="stat-icon" style={{ backgroundColor: stat.color + '20' }}>
-                {stat.icon}
-              </div>
-              <div className="stat-info">
-                <h3>{stat.value}</h3>
-                <p className="stat-title">{stat.title}</p>
-                <span className="stat-trend">{stat.trend}</span>
-              </div>
-            </div>
-          ))}
-        </section>
 
         {/* Main Content Grid */}
         <div className="content-grid">
@@ -128,17 +95,36 @@ const AdminDashboard = () => {
                     <div className="interview-time">
                       <span>{item.time}</span>
                     </div>
-                    
                   </li>
                 ))}
               </ul>
             )}
           </section>
 
-          
+          {/* Question Bank Card */}
+          <section className="question-bank-section">
+            <div className="question-bank-card" onClick={handleQuestionBank}>
+              <div className="card-icon">
+                <span>📚</span>
+              </div>
+              <div className="card-content">
+                <h3>Question Bank</h3>
+                <p>Access and manage interview questions</p>
+                <div className="card-stats">
+                  <span className="stat-item">
+                    <strong>10+</strong> Questions
+                  </span>
+                  <span className="stat-item">
+                    <strong>7</strong> Categories
+                  </span>
+                </div>
+              </div>
+              <div className="card-arrow">
+                <span>→</span>
+              </div>
+            </div>
+          </section>
         </div>
-
-        
       </main>
     </div>
   );

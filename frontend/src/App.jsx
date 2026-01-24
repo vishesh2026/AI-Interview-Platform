@@ -18,6 +18,7 @@ import CommonInterviewQuestions from './pages/CommonInterviewQuestions.jsx'
 import CommonHRQuestions from './pages/CommonHRQuestions.jsx'
 import Quiz from './pages/Quiz.jsx'
 import Results from './pages/Results.jsx'
+import QuestionBank from "./pages/QuestionBank/QuestionBank.jsx";
 import "./App.scss"
 import 'react-tooltip/dist/react-tooltip.css'
 import { useState } from 'react'
@@ -95,6 +96,10 @@ function App() {
     {
       path: "/quiz/:id",
       element: user ? <Quiz /> : <Navigate to="/" />
+    },
+    {
+      path: "/question-bank",
+      element: user ? <QuestionBank /> : <Navigate to="/" />
     },
     {
       path: "/results/:id",
